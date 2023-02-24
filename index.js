@@ -43,7 +43,7 @@ function dataValidate(data) {
 app.get("/", async (req, res) => {
   const allCases = await CovidData.find();
   // res.send(`There are total ${allCases.length} cases in India`);
-  res.send(allCases);
+  res.json(allCases);
 });
 
 app.post("/api/data", (req, res) => {
